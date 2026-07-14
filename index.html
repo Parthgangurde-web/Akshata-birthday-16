@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Birthday!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-card">
+        <h1 class="birthday-title">Happiesttt birthday madammmm 💗</h1>
+
+        <div class="candle-section" onclick="blowCandle()">
+            <div class="candle-stick">
+                <div class="flame" id="birthdayFlame"></div>
+            </div>
+            <p class="instruction-text" id="candleText">Tap the flame to blow out the candle! 🎂</p>
+        </div>
+
+        <div class="bouquet-wrapper">
+            <div class="wrap-paper"></div>
+            <div class="wrap-ribbon"></div>
+            
+            <div class="flower rose-pink">
+                <span class="petal p1"></span>
+                <span class="petal p2"></span>
+                <span class="petal p3"></span>
+                <span class="petal p4"></span>
+                <span class="flower-core"></span>
+            </div>
+            
+            <div class="flower blossom-yellow">
+                <span class="petal p1"></span>
+                <span class="petal p2"></span>
+                <span class="petal p3"></span>
+                <span class="petal p4"></span>
+                <span class="flower-core"></span>
+            </div>
+            
+            <div class="flower bloom-lavender">
+                <span class="petal p1"></span>
+                <span class="petal p2"></span>
+                <span class="petal p3"></span>
+                <span class="petal p4"></span>
+                <span class="flower-core"></span>
+            </div>
+            
+            <div class="foliage leaf-left"></div>
+            <div class="foliage leaf-right"></div>
+        </div>
+
+        <button class="surprise-trigger" onclick="openCard()">
+            <span>Click for a Surprise! ✨</span>
+        </button>
+    </main>
+
+    <div class="modal-overlay" id="cardOverlay" onclick="closeCardOutside(event)">
+        <div class="greeting-modal-card">
+            <div class="modal-header">
+                <h2>For You... 🤍</h2>
+            </div>
+            <div class="modal-body">
+                <p>Tujha life madhe nehmi happiness success ani peace bharpur asu de je kahi dreams ahet te sagleee houde and yep don't forget you matter to me the most 🤍 once again happy birthday have an unforgettable day I hope you will love this 🫶</p>
+            </div>
+            <div class="modal-footer">
+                <button class="dismiss-btn" onclick="closeCard()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
